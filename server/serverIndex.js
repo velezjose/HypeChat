@@ -10,7 +10,7 @@ let connections = [];
 
 app.use(morgan('tiny'));
 
-app.get('/', (req, res) => res.sendFile(__dirname + '/index.html'));
+app.use(express.static(path.resolve(__dirname + '/../public')));
 
 io.sockets.on('connection', socket => {
   connections.push(socket);
