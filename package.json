@@ -2,10 +2,12 @@
   "name": "hypechat-app",
   "version": "1.0.0",
   "description": "Mini web app for chatting and sending messages between clients.",
-  "main": "socket-server.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "start:dev": "nodemon server.js"
+    "start:dev": "nodemon server.js",
+    "build": "webpack --mode production",
+    "build:dev": "webpack --watch --mode development"
   },
   "repository": {
     "type": "git",
@@ -18,10 +20,20 @@
   },
   "homepage": "https://github.com/velezjose/HypeChat#readme",
   "dependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.0.5",
+    "express": "*",
+    "nodemon": "^1.18.10",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
     "socket.io": "^2.2.0",
-    "express": "*"
+    "webpack": "^4.29.6"
   },
   "devDependencies": {
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "webpack-cli": "^3.2.3"
   }
 }
