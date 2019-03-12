@@ -1,0 +1,27 @@
+{
+  "name": "hypechat-app",
+  "version": "1.0.0",
+  "description": "Mini web app for chatting and sending messages between clients.",
+  "main": "socket-server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/velezjose/HypeChat.git"
+  },
+  "author": "Jose Velez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/velezjose/HypeChat/issues"
+  },
+  "homepage": "https://github.com/velezjose/HypeChat#readme",
+  "dependencies": {
+    "socket.io": "^2.2.0",
+    "express": "*"
+  },
+  "devDependencies": {
+    "morgan": "^1.9.1"
+  }
+}
