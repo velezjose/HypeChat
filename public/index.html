@@ -1,62 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="icon" href="hypechat.ico" type="image/ico">
     <title>HypeChat</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <script src='/socket.io/socket.io.js'></script>
-    <style>
-      body {
-        margin-top: 30px;
-      }
+    <!-- Bootstrap CDN -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css'>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js'></script>
 
-      #messageArea {
-        display: none;
-      }
-    </style>
+    <!-- React CDN -->
+    <script crossorigin src='https://unpkg.com/react@16/umd/react.development.js'></script>
+    <script crossorigin src='https://unpkg.com/react-dom@16/umd/react-dom.development.js'></script>
+
+    
+    <script src='/socket.io/socket.io.js'></script>
   </head>
   <body>
-    <div class='container'>
-      <div id='userFormArea' class='row'>
-        <div class='col-md-12'>
-            <form id='userForm'>
-              <div class='form-group'>
-                <label>Enter Username:</label>
-                <textarea class='form-control' id='username'></textarea>
-                <br />
-                <input type='submit' class='btn btn-primary' value='Login' />
-              </div>
-            </form>
-        </div>
-      </div>
-
-      <div id='messageArea' class='row'>
-
-        <div class='col-md-4'>
-          <div class='well'>
-            <h3>Online Users</h3>
-            <ul class='list-group' id='users'></ul>
-          </div>
-        </div>
-
-        <div class='col-md-8'>
-          <form id='messageForm'>
-            <div class='form-group'>
-              <label>Enter message:</label>
-              <textarea class='form-control' id='message'></textarea>
-              <br />
-              <input type='submit' class='btn btn-primary' value='Send Message' />
-            </div>
-          </form>
-          <div class='chat' id='chat'></div>
-        </div>
-
-      </div>
-
-
-    </div>
-
+    <div id='app'></div>
+    
+    <script src='bundle.js'></script>
     <script>
       $(() => {
         let socket = io.connect();
