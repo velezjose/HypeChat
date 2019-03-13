@@ -1,14 +1,11 @@
 import React from 'react';
 import Message from './Message.jsx';
 
-const MessageList = props => {
-  return (
-    <div id='messageArea' class='row'>
-      <div class='chat' id='chat'></div>
-
-      <Message />
-    </div>
-  );
-};
+// MessageList is a stateless functional based component that renders all of the messages
+const MessageList = ({ messages }) => (
+  <div className='row col-md-8' style={{ float: 'right' }}>
+    { messages.map(({ message, username }, idx) => <Message key={ idx } message={ message } username={ username } />) }
+  </div>
+);
 
 export default MessageList;

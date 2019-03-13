@@ -1,9 +1,6 @@
 import React from 'react';
 
-const User = ({ username }) => {
-  return (
-    <li class='list-group-item'>${ username }</li>
-  );
-};
+// User is a stateless functional component that renders a single username
+const User = ({ username }) => <li className='list-group-item'>{ username }</li>;
 
 export default User;

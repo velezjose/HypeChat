@@ -1,17 +1,17 @@
 import React from 'react';
-import User from './User';
+import User from './User.jsx';
 
-const UserList = props => {
-  return (
-    <div class='col-md-4'>
-      <div class='well'>
-        <h3>Online Users</h3>
-        <ul class='list-group' id='users'>
-          { props.users.map(user => <User user={ user } />) }
-        </ul>
-      </div>
-    </div>
-  );
-};
+// UserList is a stateless functional component that renders a list of currently connected users
+const UserList = ({ users }) => (
+  <div className='col-md-4 well'>
+
+    <h3>Online Users</h3>
+
+    <ul className='list-group'>
+      { users.map((username, idx) => <User key={ idx } username={ username } />) }
+    </ul>
+
+  </div>
+);
 
 export default UserList;
