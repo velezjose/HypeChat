@@ -1,4 +1,4 @@
-# HypeChat
+# HypeChat Messaging App
 
 ## About
 
