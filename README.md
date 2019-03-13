@@ -11,15 +11,15 @@ There are three branches each using a different front-end technology:
 
 
 Homepage before joining chat: <br />
-<img src="/screenshots/user-login-page.png" alt="Homepage before joining chat" width="500px" height="352px">
+<img src="/screenshots/user-login-page.png" alt="Homepage before joining chat" width="550px" height="387px">
 <br />
 
 Upgrade Headers: HTTP –> WebSocket <br />
-<img src="/screenshots/http-upgrade-to-websocket.png" alt="Websocket upgrade headers" width="500px" height="350px">
+<img src="/screenshots/http-upgrade-to-websocket-circles.png" alt="Websocket upgrade headers" width="550px" height="385px">
 <br />
 
 Users chatting: <br />
-<img src="/screenshots/users-chatting.png" alt="Users chatting using the provided message textarea" width="500px" height="350px">
+<img src="/screenshots/users-chatting.png" alt="Users chatting using the provided message textarea" width="550px" height="385px">
 <br />
 
 
