@@ -3,7 +3,7 @@ import User from './User.jsx';
 
 // UserList is a stateless functional component that renders a list of currently connected users
 const UserList = ({ users }) => (
-  <div className='col-md-4 well'>
+  <div className='col-md-3 well' style={{ marginLeft: 20 }}>
 
     <h3>Online Users</h3>
 

@@ -36,10 +36,11 @@ class UserCreator extends Component {
     let { username } = this.state;
 
     return (
-      <div className='row col-md-12'>
+      <div className='row col-md-12' style={{ marginTop: 20, marginLeft: 20 }}>
 
         <form className='form-group' style={{ width: 220, height: 15, fontSize: 15 }}>
-
+          <label>Enter username to join:</label>
+          
           <textarea className='form-control' value={ username } placeholder="Username"
             onChange={ this.onTextboxInput } onKeyPress={ this.onTextboxInput } 
             style={{ height: 40, fontSize: 20 }}>
@@ -47,7 +48,7 @@ class UserCreator extends Component {
 
           <br />
 
-          <button onClick={ this.onUsernameSubmit } className='btn btn-primary'>Enter username</button>
+          <button onClick={ this.onUsernameSubmit } className='btn btn-primary'>Join chat</button>
 
         </form>
 
